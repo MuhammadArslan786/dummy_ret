@@ -1,26 +1,32 @@
-package com.arslan6015.dummy_ret;
+package com.arslan6015.dummy_ret
 
-import android.content.Context;
-
-import androidx.test.platform.app.InstrumentationRegistry;
-import androidx.test.ext.junit.runners.AndroidJUnit4;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-import static org.junit.Assert.*;
+import com.google.gson.annotations.SerializedName
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import android.os.Bundle
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
+import com.arslan6015.dummy_ret.R
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import com.arslan6015.dummy_ret.JsonPlaceHolderApi
+import com.arslan6015.dummy_ret.Post
+import org.junit.Assert
+import org.junit.Test
+import org.junit.runner.RunWith
+import retrofit2.http.GET
 
 /**
  * Instrumented test, which will execute on an Android device.
  *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+ * @see [Testing documentation](http://d.android.com/tools/testing)
  */
-@RunWith(AndroidJUnit4.class)
-public class ExampleInstrumentedTest {
+@RunWith(AndroidJUnit4::class)
+class ExampleInstrumentedTest {
     @Test
-    public void useAppContext() {
+    fun useAppContext() {
         // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.arslan6015.dummy_ret", appContext.getPackageName());
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        Assert.assertEquals("com.arslan6015.dummy_ret", appContext.packageName)
     }
 }

@@ -1,31 +1,36 @@
-package com.arslan6015.dummy_ret;
+package com.arslan6015.dummy_ret
 
-import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.SerializedName
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import android.os.Bundle
+import com.arslan6015.dummy_ret.R
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import com.arslan6015.dummy_ret.JsonPlaceHolderApi
+import com.arslan6015.dummy_ret.Post
+import retrofit2.http.GET
 
-public class Post {
-
-    private int userId;
-
-    private int id;
-
-    private String title;
+class Post {
+    private val userId = 0
+    private val id = 0
+    private val title: String? = null
 
     @SerializedName("body")
-    private String text;
-
-    public int getUserId() {
-        return userId;
+    private val text: String? = null
+    fun getUserId(): Int {
+        return userId
     }
 
-    public int getId() {
-        return id;
+    fun getId(): Int {
+        return id
     }
 
-    public String getTitle() {
-        return title;
+    fun getTitle(): String? {
+        return title
     }
 
-    public String getText() {
-        return text;
+    fun getText(): String? {
+        return text
     }
 }

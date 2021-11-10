@@ -1,17 +1,26 @@
-package com.arslan6015.dummy_ret;
+package com.arslan6015.dummy_ret
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import com.google.gson.annotations.SerializedName
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import android.os.Bundle
+import com.arslan6015.dummy_ret.R
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import com.arslan6015.dummy_ret.JsonPlaceHolderApi
+import com.arslan6015.dummy_ret.Post
+import org.junit.Assert
+import org.junit.Test
+import retrofit2.http.GET
 
 /**
  * Example local unit test, which will execute on the development machine (host).
  *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
+ * @see [Testing documentation](http://d.android.com/tools/testing)
  */
-public class ExampleUnitTest {
+class ExampleUnitTest {
     @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+    fun addition_isCorrect() {
+        Assert.assertEquals(4, (2 + 2).toLong())
     }
 }

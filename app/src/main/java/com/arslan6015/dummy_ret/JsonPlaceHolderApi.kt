@@ -1,13 +1,18 @@
-package com.arslan6015.dummy_ret;
+package com.arslan6015.dummy_ret
 
+import com.google.gson.annotations.SerializedName
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.TextView
+import android.os.Bundle
+import com.arslan6015.dummy_ret.R
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+import com.arslan6015.dummy_ret.JsonPlaceHolderApi
+import com.arslan6015.dummy_ret.Post
+import retrofit2.Call
+import retrofit2.http.GET
 
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.http.GET;
-
-public interface JsonPlaceHolderApi {
-
+interface JsonPlaceHolderApi {
     @GET("posts")
-    Call<List<Post>> getPosts();
+    open fun getPosts(): Call<MutableList<Post?>?>?
 }
